@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and Foreground Image</title>
+    <style>
+        /* Set the background image */
+        body {
+            background-image: url('background-image.jpg'); /* Replace with your background image path */
+            background-size: cover; /* Ensure the background covers the entire page */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Make background fixed during scrolling */
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style for the foreground image */
+        .foreground-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the foreground image */
+            width: 300px; /* Set a size for the foreground image */
+            height: auto;
+            z-index: 1; /* Ensure it appears on top of the background */
+        }
+
+        /* Add some overlay text to demonstrate the foreground concept */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            z-index: 2; /* Ensure it appears above the image */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Foreground Image -->
+    <img src="foreground-image.png" alt="Foreground" class="foreground-image"> <!-- Replace with your foreground image -->
+
+    <!-- Content Overlay -->
+    <div class="content">
+        <h1>Welcome to My Web Page</h1>
+        <p>Enjoy the background and foreground image combination!</p>
+    </div>
+
+</body>
+</html>
